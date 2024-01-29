@@ -81,13 +81,13 @@ public class WaterTankModule extends PowerModuleBase implements IPlayerTickModul
         if (((block == Blocks.water) || block == Blocks.flowing_water) && MuseItemUtils.getWaterLevel(item) < ModuleManager.computeModularProperty(item, WATER_TANK_SIZE)) {
             MuseItemUtils.setWaterLevel(item, MuseItemUtils.getWaterLevel(item) + 1);
         }
-        // Fill tank if raining
+        /* // Fill tank if raining
         int xCoord = MathHelper.floor_double(player.posX);
         int zCoord = MathHelper.floor_double(player.posZ);
         boolean isRaining = (player.worldObj.getWorldChunkManager().getBiomeGenAt(xCoord, zCoord).getIntRainfall() > 0) && (player.worldObj.isRaining() || player.worldObj.isThundering());
         if (isRaining && player.worldObj.canBlockSeeTheSky(xCoord, MathHelper.floor_double(player.posY) + 1, zCoord) && (player.worldObj.getTotalWorldTime() % 5) == 0 && MuseItemUtils.getWaterLevel(item) < ModuleManager.computeModularProperty(item, WATER_TANK_SIZE)) {
             MuseItemUtils.setWaterLevel(item, MuseItemUtils.getWaterLevel(item) + 1);
-        }
+        }*/
         // Apply cooling
         double currentHeat = MuseHeatUtils.getPlayerHeat(player);
         double maxHeat = MuseHeatUtils.getMaxHeat(player);
